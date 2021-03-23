@@ -22,14 +22,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://echamudi@github.com/echamudi/opencv-wasm.git"
+    "url": "git+https://github.com/paulr113/opencv-wasm.git"
   },
   "author": "Ezzat Chamudi",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/echamudi/opencv-wasm/issues"
+    "url": "https://github.com/paulr113/opencv-wasm/issues"
   },
-  "homepage": "https://github.com/echamudi/opencv-wasm#readme",
+  "homepage": "https://github.com/paulr113/opencv-wasm#readme",
   "devDependencies": {
     "@types/mocha": "^8.2.0",
     "@types/node": "^14.0.1",
