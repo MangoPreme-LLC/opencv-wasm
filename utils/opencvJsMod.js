@@ -39,7 +39,13 @@ openCvJsNode =
 let Module = {};
 let opencvWasmBinaryFile = './opencv.wasm';
 
-${openCvJsNode}`;
+${openCvJsNode.replace('process["exit"](status)', `
+console.log("Caught OpenCV error code");
+//process["exit"](status)
+`).replace("throw ex", `
+//throw ex
+`)}`;
+
 fs.writeFileSync(path.join(__dirname, './build_wasm/bin/opencv.js'), openCvJsNode, {encoding: 'utf8'});
 console.log('Updated opencv.js');
 
@@ -58,7 +64,12 @@ let document = {};
 let opencvWasmBinaryFile = bin;
 let $this = {};
 
-${openCvJsDeno}
+${openCvJsDeno.replace('process["exit"](status)', `
+console.log("Caught OpenCV error code");
+//process["exit"](status)
+`).replace("throw ex", `
+//throw ex
+`)}
 
 const cv = $this.cv;
 export { cv };
